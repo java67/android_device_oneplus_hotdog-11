@@ -15,6 +15,13 @@ $(call inherit-product, vendor/oneplus/guacamole/guacamole-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
+    
+    # A/B
+AB_OTA_PARTITIONS += \
+    odm \
+    product \
+    recovery \
+    vbmeta_system
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -32,3 +39,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.display.guacamole.rc
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
