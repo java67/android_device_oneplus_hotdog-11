@@ -12,13 +12,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/hotdog/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 # Inherit GApps if exsits
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosip_hotdog
+PRODUCT_NAME := corvus_hotdog
 PRODUCT_DEVICE :=hotdog
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := HD1910
